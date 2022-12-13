@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class APIController extends Controller
 {
-    public function postData(){
+    public function getData(){
         // input will be location and crop you want to search
         // data will include the location, crop, price, projected price, price trajectory
 
@@ -27,7 +27,7 @@ class APIController extends Controller
         return $data;
     }
 
-    public function getData(){
+    public function postData(){
         // from the api user
         $location = 'location';
         $crop = 'crop'; 
