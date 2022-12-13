@@ -34,3 +34,7 @@ Route::get('data', function() {
         ];
     return $data;
 });
+
+Route::post('data', function(){
+    
+});
