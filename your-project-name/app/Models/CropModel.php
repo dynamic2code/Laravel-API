@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class CropModel extends Model
 {
     use HasFactory;
-    
+    protected $table = 'crop-model';
+
+    public function getdata($input){
+
+    }
 }

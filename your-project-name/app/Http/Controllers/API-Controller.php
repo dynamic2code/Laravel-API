@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CropModel;
 use Illuminate\Http\Request;
 
 class APIController extends Controller
