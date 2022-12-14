@@ -21,3 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/getdata',[APIController::class,'getData']);
 
 Route::post('/postdata', [APIController::class,'postData']);
+
+Route::get('/get', function(){
+    return "prouct";
+});

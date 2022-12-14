@@ -18,11 +18,11 @@ class APIController extends Controller
         $projectedPrice = "projected price";
         $priceTrajectory = "price trajectory";
 
-        $data = ["location"=>$location,
-                "crop"=> $crop,
-                "currentPrice"=>$price,
-                "projectedPrice"=> $projectedPrice,
-                "price trajectory"=> $priceTrajectory
+        $data = [$location,
+                $crop,
+                $price,
+                $projectedPrice,
+                $priceTrajectory
             ];
         return $data;
     }
