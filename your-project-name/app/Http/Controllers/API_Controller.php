@@ -9,7 +9,7 @@ class API_Controller extends Controller
 {
     public function postData(){
         // from the api user
-      
+        global $input;
 
         $location = ('location');
         $crop = ('crop');
@@ -18,8 +18,8 @@ class API_Controller extends Controller
         return $input;
     }
 
-    public function getData($input){
-        
+    public function getData(){
+        global $input;
         $fromDb = app(CropModel::class);
         $data = $fromDb -> getdata($input);
         

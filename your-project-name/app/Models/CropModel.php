@@ -15,9 +15,7 @@ class CropModel extends Model
    
     public function getdata($input){
 
-        $data = DB::table('crop-models')->where('crop',$input[0])->where('location',$input[1])->get();
+        DB::table('crop-models')->where('crop',$input[0])->where('location',$input[1])->get();
               
-
-        return $data;
     }
 }
