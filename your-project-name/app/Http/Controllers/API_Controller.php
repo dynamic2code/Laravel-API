@@ -11,8 +11,8 @@ class API_Controller extends Controller
         // from the api user
         global $input;
 
-        $location = ('location');
-        $crop = ('crop');
+        $location = ('nairobi');
+        $crop = ('Beans');
         
         $input = [$crop, $location];
         return $input;
@@ -25,6 +25,7 @@ class API_Controller extends Controller
         
         return $data;
     }
+
 
 
 }
