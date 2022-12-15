@@ -7,24 +7,25 @@ use Illuminate\Http\Request;
 
 class APIController extends Controller
 {
-    public function getData(){
+    public function getData(CropModel $CropModel, $input){
         // input will be location and crop you want to search
         // data will include the location, crop, price, projected price, price trajectory
 
         // from db end point
+        
+        // $location = "location";
+        // $crop = "crop";
+        // $price = "price";
+        // $projectedPrice = "projected price";
+        // $priceTrajectory = "price trajectory";
 
-        $location = "location";
-        $crop = "crop";
-        $price = "price";
-        $projectedPrice = "projected price";
-        $priceTrajectory = "price trajectory";
-
-        $data = [$location,
-                $crop,
-                $price,
-                $projectedPrice,
-                $priceTrajectory
-            ];
+        // $data = [$location,
+        //         $crop,
+        //         $price,
+        //         $projectedPrice,
+        //         $priceTrajectory
+        //     ];
+        $data = $CropModel -> getdata($input);
         return $data;
     }
 

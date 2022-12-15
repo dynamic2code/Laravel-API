@@ -8,9 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class CropModel extends Model
 {
     use HasFactory;
-    protected $table = 'crop-model';
-
+    
+    // protected $table = 'crop-model';
+   
     public function getdata($input){
 
+        $data = ("SELECT * FROM crop-model WHERE crop = '$input[0]' AND location = '$input[1]'");
+
+        return $data;
     }
 }
