@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use Symfony\Component\Console\Input\Input;
 
 class CropModel extends Model
 {
@@ -13,7 +15,8 @@ class CropModel extends Model
    
     public function getdata($input){
 
-        $data = ("SELECT * FROM crop-model WHERE crop = '$input[0]' AND location = '$input[1]'");
+        $data = DB::table('crop-models')->where('crop',$input[0])->where('location',$input[1])->get();
+              
 
         return $data;
     }

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\APIController;
+use App\Http\Controllers\API_Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/getdata',[APIController::class,'getData']);
+Route::get('/getdata',[API_Controller::class,'getData($input)']);
 
-Route::post('/postdata', [APIController::class,'postData']);
+Route::post('/postdata', [API_Controller::class,'postData']);
 
 Route::get('/get', function(){
     return "prouct";
